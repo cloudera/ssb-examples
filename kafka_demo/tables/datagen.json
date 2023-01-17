@@ -1,0 +1,17 @@
+{
+  "metadata" : {
+    "fields.itemId.expression" : "#{numerify 'item_####'}",
+    "connector" : "faker",
+    "fields.quantity.expression" : "#{number.numberBetween '-500','500'}",
+    "schema.2.data-type" : "INT",
+    "schema.0.data-type" : "INT",
+    "schema.2.name" : "quantity",
+    "schema.1.name" : "itemId",
+    "fields.transactionId.expression" : "#{number.numberBetween '100000000','999999999'}",
+    "schema.0.name" : "transactionId",
+    "schema.1.data-type" : "VARCHAR(2147483647)"
+  },
+  "type" : "ssb",
+  "table_name" : "datagen",
+  "transform_code_b64_encoded" : false
+}

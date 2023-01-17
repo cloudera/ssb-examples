@@ -1,0 +1,37 @@
+{
+  "metadata" : {
+    "schema.watermark.0.strategy.expr" : "`eventTimestamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.0.data-type" : "BIGINT",
+    "schema.2.name" : "itemId",
+    "schema.4.metadata" : "timestamp",
+    "format" : "json",
+    "schema.1.name" : "ts",
+    "schema.4.virtual" : "false",
+    "scan.startup.mode" : "earliest-offset",
+    "schema.4.name" : "eventTimestamp",
+    "schema.1.data-type" : "BIGINT",
+    "schema.3.data-type" : "BIGINT",
+    "connector" : "kafka: kafka",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "quantity",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.rowtime" : "eventTimestamp",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "transaction.log.1",
+    "schema.4.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.0.name" : "transactionId",
+    "ssb.schema.text" : "{\n  \"type\": \"record\",\n  \"name\": \"inferredSchema\",\n  \"fields\": [\n    {\n      \"name\": \"transactionId\",\n      \"type\": \"long\",\n      \"doc\": \"Type inferred from '6301920965038580999'\"\n    },\n    {\n      \"name\": \"ts\",\n      \"type\": \"long\",\n      \"doc\": \"Type inferred from '1669796674999'\"\n    },\n    {\n      \"name\": \"itemId\",\n      \"type\": \"string\",\n      \"doc\": \"Type inferred from '\\\"item_74429\\\"'\"\n    },\n    {\n      \"name\": \"quantity\",\n      \"type\": \"long\",\n      \"doc\": \"Type inferred from '-35'\"\n    }\n  ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "transaction_log_1",
+  "transform_code_b64_encoded" : false,
+  "transform_code" : ""
+}

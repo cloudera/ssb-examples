@@ -1,0 +1,10 @@
+{
+  "id" : "bcb5fe2d47024d0bbfa28182473ed1ec",
+  "name" : "kafka",
+  "type" : "kafka",
+  "properties" : {
+    "brokers" : "kafka:9092",
+    "protocol" : "plaintext",
+    "mechanism" : null
+  }
+}

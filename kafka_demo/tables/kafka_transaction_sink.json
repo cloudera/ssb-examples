@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "properties.auto.offset.reset" : "earliest",
+    "schema.0.data-type" : "INT",
+    "schema.2.name" : "itemId",
+    "format" : "json",
+    "schema.1.name" : "ts",
+    "scan.startup.mode" : "earliest-offset",
+    "schema.1.data-type" : "BIGINT",
+    "properties.bootstrap.servers" : "kafka:9092",
+    "schema.3.data-type" : "INT",
+    "connector" : "kafka",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "quantity",
+    "topic" : "transaction.log.1",
+    "schema.0.name" : "transactionId"
+  },
+  "type" : "ssb",
+  "table_name" : "kafka_transaction_sink",
+  "transform_code_b64_encoded" : false
+}
