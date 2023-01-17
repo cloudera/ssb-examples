@@ -1,0 +1,8 @@
+{
+  "name" : "CELSIUSTOFAHRENHEIT",
+  "description" : "Converts a string formatted <Celsius temperature>°C to <Fahrenheit temperature>°F.",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "STRING" ],
+  "code" : "function CELSIUSTOFAHRENHEIT(input){\n   var celsius = parseInt(input.substring(0, input.length - 2));\n   var fahrenheit = (celsius * 9 / 5 + 32).toFixed(2);\n   return fahrenheit + '\\xB0F';\n}\n\nCELSIUSTOFAHRENHEIT($p0);"
+}

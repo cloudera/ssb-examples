@@ -1,0 +1,8 @@
+{
+  "name" : "METERTOFEET",
+  "description" : "Converts a string formatted <distance in meter>m to <distance in feet>ft.",
+  "language" : "JavaScript",
+  "output_type" : "STRING",
+  "input_types" : [ "STRING" ],
+  "code" : "function METERTOFEET(input) { \n   var meter = parseInt(input.substring(0, input.length - 1));\n   var feet = (meter * 3.28084).toFixed(2);\n   return feet + 'ft';\n}\n\nMETERTOFEET($p0);"
+}

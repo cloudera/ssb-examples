@@ -1,0 +1,38 @@
+{
+  "job_name" : "schema_as_source",
+  "api_endpoints" : [ ],
+  "sql" : "DROP  TABLE  IF  EXISTS `airport-weather-kafka`;\nCREATE  TABLE `airport-weather-kafka` (\n`airport` VARCHAR(2147483647)  NOT  NULL,\n`temperature` VARCHAR(2147483647)  NOT  NULL,\n`visibility` VARCHAR(2147483647)  NOT  NULL,\n`eventTimestamp` TIMESTAMP(3),\nWATERMARK FOR `eventTimestamp` AS `eventTimestamp` - INTERVAL '30'  SECOND,\nPRIMARY  KEY  (airport)  NOT ENFORCED\n)  WITH  (\n'connector'  =  'upsert-kafka',\n'topic'  =  'airport-weather-kafka',\n'properties.request.timeout.ms'  =  '120000',\n'properties.bootstrap.servers'  =  'kafka:9092',\n'properties.group.id'  =  'testGroup',\n'properties.auto.offset.reset'  =  'earliest',\n'key.format'  =  'raw',\n'value.format'  =  'json'\n);\n\nINSERT  INTO `airport-weather-kafka`\n\tSELECT  *  FROM `schema-registry`.`default_database`.`airport-weather`;",
+  "mv_config" : {
+    "name" : "schema_as_source",
+    "retention" : 300,
+    "min_row_retention_count" : 0,
+    "recreate" : false,
+    "key_column_name" : null,
+    "api_key" : null,
+    "ignore_nulls" : false,
+    "require_restart" : false,
+    "batch_size" : 0,
+    "enabled" : false
+  },
+  "checkpoint_config" : {
+    "enable_checkpointing" : true,
+    "checkpoint_interval_millis" : 600000,
+    "checkpoint_timeout_millis" : 60000,
+    "tolerable_checkpoint_failures" : 2,
+    "checkpoint_mode" : "AT_LEAST_ONCE",
+    "restart_strategy" : "exponential_delay",
+    "exponential_backoff_delay_max_seconds" : 60
+  },
+  "runtime_config" : {
+    "execution_mode" : "SESSION",
+    "parallelism" : 1,
+    "sample_interval" : 1000,
+    "sample_count" : 100,
+    "window_size" : 100,
+    "start_with_savepoint" : false,
+    "log_config" : {
+      "type" : "LOG4J_PROPERTIES",
+      "content" : ""
+    }
+  }
+}

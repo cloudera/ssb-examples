@@ -1,0 +1,26 @@
+{
+  "metadata" : {
+    "schema.5.name" : "eventTimestamp",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "airport",
+    "schema.1.name" : "aircraft",
+    "schema.4.name" : "visibility_feet",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "properties.bootstrap.servers" : "kafka:9092",
+    "schema.3.data-type" : "VARCHAR(2147483647)",
+    "connector" : "kafka",
+    "schema.2.data-type" : "VARCHAR(2147483647)",
+    "schema.3.name" : "temp_fahrenheit",
+    "properties.request.timeout.ms" : "120000",
+    "value.format" : "json",
+    "topic" : "takeoff-weather",
+    "properties.group.id" : "testGroup",
+    "schema.5.data-type" : "TIMESTAMP(3)",
+    "schema.4.data-type" : "VARCHAR(2147483647)",
+    "schema.0.name" : "pilot"
+  },
+  "type" : "ssb",
+  "table_name" : "takeoff-weather",
+  "transform_code_b64_encoded" : false
+}

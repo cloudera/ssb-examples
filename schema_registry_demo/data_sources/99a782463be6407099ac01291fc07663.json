@@ -1,0 +1,11 @@
+{
+  "id" : "99a782463be6407099ac01291fc07663",
+  "name" : "schema-registry",
+  "type" : "catalog",
+  "properties" : {
+    "table_filters" : [ ],
+    "catalog_type" : "registry",
+    "kafka.provider.id" : "ba26cf318b464e2f9c0c0aa7a712481a",
+    "registry.address" : "http://schema-registry:7788/api/v1/"
+  }
+}

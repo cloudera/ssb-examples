@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "schema.watermark.0.strategy.expr" : "`eventTimestamp` - INTERVAL '15' SECOND",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "fields.eventTimestamp.expression" : "#{date.past '15','SECONDS'}",
+    "schema.2.name" : "eventTimestamp",
+    "fields.aircraft.expression" : "#{Aviation.aircraft}",
+    "schema.1.name" : "airport",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "connector" : "faker",
+    "schema.2.data-type" : "TIMESTAMP(3)",
+    "schema.watermark.0.rowtime" : "eventTimestamp",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "fields.airport.expression" : "#{Aviation.airport}",
+    "rows-per-second" : "100",
+    "schema.0.name" : "aircraft"
+  },
+  "type" : "ssb",
+  "table_name" : "takeoff-faker",
+  "transform_code_b64_encoded" : false
+}

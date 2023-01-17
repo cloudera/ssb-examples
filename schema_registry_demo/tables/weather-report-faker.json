@@ -1,0 +1,21 @@
+{
+  "metadata" : {
+    "schema.0.data-type" : "VARCHAR(2147483647) NOT NULL",
+    "fields.eventTimestamp.expression" : "#{date.past '30','SECONDS'}",
+    "schema.2.name" : "temperature",
+    "fields.latitude.expression" : "#{Address.latitude}",
+    "schema.1.name" : "latitude",
+    "schema.1.data-type" : "VARCHAR(2147483647) NOT NULL",
+    "schema.3.data-type" : "TIMESTAMP(3)",
+    "connector" : "faker",
+    "schema.2.data-type" : "VARCHAR(2147483647) NOT NULL",
+    "schema.3.name" : "eventTimestamp",
+    "fields.longitude.expression" : "#{Address.longitude}",
+    "fields.temperature.expression" : "#{Weather.temperatureCelsius}",
+    "rows-per-second" : "100",
+    "schema.0.name" : "longitude"
+  },
+  "type" : "ssb",
+  "table_name" : "weather-report-faker",
+  "transform_code_b64_encoded" : false
+}

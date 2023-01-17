@@ -1,0 +1,10 @@
+*.iml
+/get-pilot/.idea/
+/lookup-address/.idea/
+.DS_Store
+/*/.DS_Store
+/*/*.iml
+/get-pilot/target/*
+!/get-pilot/target/get-pilot-1.0-jar-with-dependencies.jar
+/lookup-address/target/*
+!/lookup-address/target/lookup-address-1.0-jar-with-dependencies.jar
